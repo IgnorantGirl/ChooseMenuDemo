@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ChooseMenu</string>
+    <string name="name">姓 名</string>
+    <string name="start_select_food">开始选餐</string>
+</resources>

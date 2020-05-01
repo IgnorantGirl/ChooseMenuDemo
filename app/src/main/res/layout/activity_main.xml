@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#B9B9F1"
+            android:text="@string/start_select_food"
+            android:textAlignment="center"
+            android:textColorHint="#8a2bE2"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            android:typeface="monospace"
+            />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginBottom="15dp"
+
+       >
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/name"
+            android:textSize="20dp"
+            android:typeface="monospace" />
+        <EditText
+            android:id="@+id/name_editText"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入姓名"
+            />
+   </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+
+            >
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="性 别"
+                android:textSize="20dp"
+               />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/group_radio">
+
+                <RadioButton
+                    android:id="@+id/maleRaidoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="男"
+                    />
+                <RadioButton
+                    android:id="@+id/femaleRaidoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="女"
+                    />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+
+            >
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="喜 好"
+                android:textSize="20dp"
+                />
+
+             <CheckBox
+                 android:id="@+id/hot_checkbox"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginRight="6dp"
+                 android:text="辣"  />
+            <CheckBox
+                android:id="@+id/fish_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:text="海鲜"  />
+            <CheckBox
+                android:id="@+id/sour_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:text="酸"  />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            >
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="预 算"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0元"
+                />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="211dp"
+                android:layout_height="match_parent"
+                android:max="100" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100元"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/search_menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查找菜品" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/food_imageView"
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="255dp" />
+
+        <ToggleButton
+            android:id="@+id/show_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff="下一个"
+            android:textOn="显示信息" />
+
+    </LinearLayout>
+</LinearLayout>
